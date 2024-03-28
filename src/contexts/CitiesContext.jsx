@@ -11,7 +11,9 @@ const BASE_URL = "http://localhost:9000";
 const CityProvider = ({ children }) => {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [currentCity, setCurrentCity] = useState({});
 
+  //load all city data
   useEffect(() => {
     (async () => {
       try {
@@ -29,9 +31,28 @@ const CityProvider = ({ children }) => {
     })();
   }, []);
 
+  //load a single city data
+  const getCity = async (id) => {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities/${id}`);
+      const data = await res.json();
+      setCurrentCity(data);
+    } catch (Error) {
+      console.log(
+        `There is a error to fetching City data of. and the error is `,
+        Error
+      );
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const PropsValue = {
     cities: cities,
     isLoading: isLoading,
+    getCity,
+    currentCity,
   };
   return (
     //create the provider with value
