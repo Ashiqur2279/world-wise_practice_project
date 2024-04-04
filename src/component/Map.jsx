@@ -7,12 +7,12 @@ import {
   useMap,
   useMapEvent,
 } from "react-leaflet";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useCities } from "../contexts/CitiesContext";
 import { useGeoLocation } from "../hooks/useGeoLocation";
+import { useUrlPosition } from "../hooks/useUrlPosition";
 import Button from "./Button";
 import styles from "./Map.module.css";
-import { useUrlPosition } from "../hooks/useUrlPosition";
 
 const Map = () => {
   const { cities } = useCities();
@@ -60,9 +60,7 @@ const Map = () => {
             // position={[city.position.lat || 40, city.position.lng || 23]}
             key={city.id}
           >
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
+            <Popup>{city.country}</Popup>
           </Marker>
         ))}
         {/* <ChangeMapPosition position={[mapLat, mapLng]} /> */}

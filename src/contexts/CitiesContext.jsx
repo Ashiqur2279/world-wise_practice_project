@@ -48,11 +48,32 @@ const CityProvider = ({ children }) => {
     }
   };
 
+  const createCity = async (newCity) => {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: {
+          "Content-type": "application/json",
+        },
+      });
+      const data = await res.json();
+      // console.log(data);
+      setCities((cities) => [...cities, data]);
+    } catch (error) {
+      alert(`there is an error. the error is ${error}`);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const PropsValue = {
     cities: cities,
     isLoading: isLoading,
     getCity,
     currentCity,
+    createCity,
   };
   return (
     //create the provider with value
