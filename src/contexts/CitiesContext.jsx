@@ -68,12 +68,27 @@ const CityProvider = ({ children }) => {
     }
   };
 
+  const deleteCity = async (id) => {
+    try {
+      setIsLoading(true);
+      await fetch(`${BASE_URL}/cities/${id}`, {
+        method: "DELETE",
+      });
+      setCities((cities) => cities.filter((city) => city.id !== id));
+    } catch (error) {
+      alert(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const PropsValue = {
     cities: cities,
     isLoading: isLoading,
     getCity,
     currentCity,
     createCity,
+    deleteCity,
   };
   return (
     //create the provider with value
