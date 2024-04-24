@@ -84,4 +84,5 @@ const DetectClick = () => {
   });
 };
 
+
 export default Map;

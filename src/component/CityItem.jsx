@@ -12,8 +12,11 @@ const formatDate = (date) =>
   }).format(new Date(date));
 
 const CityItem = ({ city }) => {
+  // console.log(city);
   const { currentCity, deleteCity } = useCities();
+  // eslint-disable-next-line react/prop-types
   const { cityName, country, emoji, notes, date, position, id } = city;
+  // console.log(cityName);
 
   const handleCity = (e) => {
     e.preventDefault();
