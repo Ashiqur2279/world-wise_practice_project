@@ -28,10 +28,10 @@ const reducer = (state, action) => {
 
 //fake user data
 const FAKE_USER = {
-  name: "Jack",
-  email: "jack@example.com",
-  password: "qwerty",
-  avatar: "https://i.pravatar.cc/100?u=zz",
+  name: "Ashiqur2279",
+  email: "ashiqurrahman@example.com",
+  password: "Ashiqur2279",
+  avatar: "https://i.ibb.co/BL93JWW/Ashiqur.png",
 };
 // create the provider
 const AuthProvider = ({ children }) => {
@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
     }
   };
   const logout = () => {
-    console.log("ete asche");
+    // console.log("ete asche");
     dispatch({ type: "logout" });
   };
   return (
