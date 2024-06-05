@@ -1,8 +1,4 @@
-# Project - World-Wise
-
-Hello,
-
-This is my practice project on ReactJS, which I developed while taking "The Ultimate React Course 2024" by Jonas Schmedtmann. This project, featured in one of the course modules, has been the most enjoyable one I've worked on. Jonas provided a starter <h1>WorldWise: Travel Tracking SPA</h1>
+<h1>WorldWise: Travel Tracking SPA</h1>
 
 <!-- the live link -->
 <h2>Live link : <a href="https://project-world-wise-by-ashiqur2279.netlify.app/" target="_blank">WorldWise Travel Tracker</a></h2>
