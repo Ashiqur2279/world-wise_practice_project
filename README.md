@@ -4,6 +4,8 @@ Hello,
 
 This is my practice project on ReactJS, which I developed while taking "The Ultimate React Course 2024" by Jonas Schmedtmann. This project, featured in one of the course modules, has been the most enjoyable one I've worked on. Jonas provided a starter <h1>WorldWise: Travel Tracking SPA</h1>
 
+<h2>Live link : <a href="https://project-world-wise-by-ashiqur2279.netlify.app/" target="_blank">WorldWise Travel Tracker</a></h2>
+
   <p>This project implements WorldWise, a React single-page application (SPA) designed to be your travel companion. Track your adventures by creating a list of visited cities, visualizing them on a map (planned feature), and adding details like countries and emojis (planned feature).</p>
 
   <h2>Features</h2>
